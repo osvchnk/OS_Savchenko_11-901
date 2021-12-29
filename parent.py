@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import os
 import sys
-inport random
+import random
 
 
 N = int(sys.argv[1])
@@ -12,7 +12,7 @@ for i in range(N):
 		child = os.fork()
 		if child == 0:
 			k = random.randint(5, 10)
-			path = os.path.abspath(”child.py")
+			path = os.path.abspath("child.py")
 			os.execl(path, "child", str(k))
 
 for i in range(N):
